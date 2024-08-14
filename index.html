@@ -38,7 +38,9 @@
   };
 
   const COMMANDS = new Map([
-    ['a', { name: 'Chat', url: 'https://chat.openai.com' }],
+    ['a', { name: 'Chat', suggestions: ['a/claude', 'a/gemini'], url: 'https://chatgpt.com' }],
+    ['a/claude', { url: 'https://claude.ai/new' }],
+    ['a/gemini', { url: 'https://gemini.google.com/app' }],
     ['b', { name: 'Dribbble', url: 'https://dribbble.com/shots/recent' }],
     ['c', { name: 'Calendar', url: 'https://calendar.google.com' }],
     ['d', { name: 'Drive', url: 'https://drive.google.com' }],
