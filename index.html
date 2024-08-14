@@ -34,7 +34,7 @@
     commandSearchDelimiter: ' ',
     defaultSearchTemplate: 'https://www.google.com/search?q={}',
     openLinksInNewTab: true,
-    suggestionLimit: 4,
+    suggestionLimit: 5,
   };
 
   const COMMANDS = new Map([
@@ -45,25 +45,13 @@
     ['c', { name: 'Calendar', url: 'https://calendar.google.com' }],
     ['d', { name: 'Drive', url: 'https://drive.google.com' }],
     ['f', { name: 'Figma', url: 'https://www.figma.com' }],
-    ['g', { name: 'GitHub', url: 'https://github.com' }],
+    ['g', { name: 'GitHub', searchTemplate: '/search?q={}', url: 'https://github.com' }],
     ['k', { name: 'Keep', url: 'https://keep.google.com' }],
-    ['m', { name: 'Mail', url: 'https://mail.proton.me/u/0/inbox' }],
     ['gm', { name: 'GMail', url: 'https://mail.google.com' }],
     ['n', { name: 'Notion', url: 'https://www.notion.so' }],
-    ['p', { name: 'Pomodoro', url: 'https://pomodoro.xvvvyz.xyz' }],
-    [
-      'r',
-      {
-        name: 'Reddit',
-        suggestions: [
-          'r/r/webdev',
-          'r/r/dataisbeautiful',
-          'r/r/fujix',
-          'r/r/leetcode',
-        ],
-        url: 'https://reddit.com',
-      },
-    ],
+    ['p', { name: 'Proton', searchTemplate: '/u/0/all-mail#keyword={}', suggestions: ['p/drive'], url: 'https://mail.proton.me/u/0/inbox' }],
+    ['p/drive', { url: 'https://drive.proton.me/u/0/' }],
+    ['r', { name: 'Reddit', searchTemplate: '/search/?q={}', suggestions: ['r/r/selfhosted', 'r/r/dataisbeautiful', 'r/r/fujix', 'r/r/leetcode'], url: 'https://reddit.com' }],
     ['s', { name: 'Supabase', url: 'https://supabase.com/dashboard/projects' }],
     ['t', { name: 'Translate', url: 'https://www.deepl.com/translator' }],
     ['v', { name: 'Vercel', url: 'https://vercel.com/dashboard' }],
@@ -75,15 +63,8 @@
         url: 'https://youtube.com/feed/subscriptions',
       },
     ],
-    [
-      '0',
-      {
-        name: 'localhost',
-        searchTemplate: ':{}',
-        suggestions: ['0 54323', '0 54324'],
-        url: 'http://localhost:3000',
-      },
-    ],
+    ['0', { name: 'local', suggestions: ['0:5173'], url: 'http://localhost:3000' }],
+    ['0:5173', { url: 'http://localhost:5173' }],
   ]);
 </script>
 
