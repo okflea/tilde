@@ -40,25 +40,32 @@
   // prettier-ignore
   const COMMANDS = new Map([
     ['a', { name: 'ChatGPT', searchTemplate: '?q={}', url: 'https://chatgpt.com' }],
+    ['ac', { name: 'Claude', url: 'https://claude.ai/new' }],
+    ['ag', { name: 'Gemini', url: 'https://gemini.google.com/app' }],
+    ['b', { name: 'perp', searchTemplate: '/search/new?q={}', url: 'https://perplexity.ai' }],
     ['c', { name: 'Cloudflare', url: 'https://dash.cloudflare.com' }],
     ['d', { name: 'Drive', url: 'https://drive.google.com/drive/u/0/my-drive' }],
     ['e', { name: 'Resend', url: 'https://resend.com/emails?time=all&page=1' }],
     ['f', { name: 'Figma', url: 'https://www.figma.com' }],
     ['g', { name: 'GitHub', searchTemplate: '/search?q={}', suggestions: ['g/copilot', 'g/trending'], url: 'https://github.com' }],
+    ['gm', { name: 'GMail', url: 'https://mail.google.com' }],
+    ['k', { name: 'Keep', url: 'https://keep.google.com' }],
     ['i', { name: 'Intuit', url: 'https://selfemployed.intuit.com/home' }],
+    ['n', { name: 'Notion', url: 'https://www.notion.so' }],
     ['o', { name: 'Droplet', url: 'https://cloud.digitalocean.com/projects/50ffcff7-ad65-40e3-af88-3cbc5a38cf99/resources' }],
     ['p', { name: 'Proton', suggestions: ['p/pass', 'p/drive'], url: 'https://mail.proton.me/u/0/inbox' }],
-    ['p/drive', { url: 'https://drive.proton.me/u/0' }],
-    ['p/pass', { url: 'https://pass.proton.me/u/0' }],
+    ['pd', { name: 'Proton Drive', url: 'https://drive.proton.me/u/0' }],
+    ['pp', { name : 'Proton Pass', url: 'https://pass.proton.me/u/0' }],
     ['r', { name: 'Reddit', searchTemplate: '/search/?q={}', url: 'https://www.reddit.com' }],
     ['s', { name: 'Supabase', url: 'https://supabase.com/dashboard/projects' }],
     ['t', { name: 'TickTick', url: 'https://ticktick.com/webapp/#q/today/tasks' }],
     ['v', { name: 'Vercel', suggestions: ['v0.dev'], url: 'https://vercel.com/dashboard' }],
     ['y', { name: 'YouTube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com/feed/subscriptions' }],
-    ['0', { name: 'localhost', suggestions: ['0:54323', '0:54324'], url: 'http://localhost:3000' }],
-    ['0:54323', { url: 'http://localhost:54323' }],
-    ['0:54324', { url: 'http://localhost:54324' }],
+    ['0', { name: 'localhost', suggestions: ['0:5173', '0:8080'], url: 'http://localhost:3000' }],
+    ['0:5173', { url: 'http://localhost:5173' }],
+    ['0:8080', { url: 'http://localhost:8080' }],
   ]);
+
 </script>
 
 <template id="commands-template">
